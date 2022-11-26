@@ -1,4 +1,5 @@
 import { ThemeProvider } from "styled-components";
+import { NotificationsContainer } from "./components/NotificationsContainer";
 import { GlobalStyles } from "./styles/global";
 
 import { defaultTheme } from './styles/themes/default'
@@ -6,8 +7,7 @@ import { defaultTheme } from './styles/themes/default'
 export function App () {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <h1>hello world</h1>
-
+      <NotificationsContainer />
       <GlobalStyles />
     </ThemeProvider>
   )
