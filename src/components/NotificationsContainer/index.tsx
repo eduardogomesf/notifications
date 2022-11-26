@@ -1,4 +1,6 @@
-import { Container, Header } from "./styles";
+import { Notification } from "../Notification";
+import { Container, Header, NotificationsList } from "./styles";
+import notificationsJSON from '../../data/notifications.json'
 
 export function NotificationsContainer () {
     return (
@@ -13,6 +15,12 @@ export function NotificationsContainer () {
 
                 <button>Mark all as read</button>
             </Header>
+
+            <NotificationsList>
+                {notificationsJSON.map(notification => (
+                    <Notification notification={notification} key={notification.username + notification.avatarUrl} />
+                ))}
+            </NotificationsList>
         </Container>
     )
 }

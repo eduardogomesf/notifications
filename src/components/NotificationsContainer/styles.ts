@@ -63,3 +63,14 @@ export const Header = styled.header`
         }
     }
 `
+
+export const NotificationsList = styled.ul`
+    margin-top: 2rem;
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+`
