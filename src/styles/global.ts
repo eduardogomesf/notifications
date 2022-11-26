@@ -10,6 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     body {
         background-color: ${({ theme }) => theme.colors.snow};
         font-size: ${({ theme }) => theme.fonts.md};
+        font-family: 'Roboto', sans-serif;
     }
 
     button {
