@@ -43,19 +43,17 @@ export function Notification ({ notification }: NotificationProps) {
         <Container isNew={notification.payload.isNew}>
             <Avatar src={notification.avatarUrl} alt='an user avatar photo' />
             <TextContainer>
-                <div>
-                    <NotificationMessage>
-                        <Username>
-                            {notification.username}
-                        </Username>
+                <NotificationMessage>
+                    <Username>
+                        {notification.username}
+                    </Username>
 
-                        {getMessageByNotificationType(notification.type)}
+                    {getMessageByNotificationType(notification.type)}
 
-                        {getAdditionalContentByType(notification)}
-                    </NotificationMessage>
+                    {getAdditionalContentByType(notification)}
 
                     {notification.payload.isNew && <NotificationDot />}
-                </div>
+                </NotificationMessage>
 
                 <time>{formatDistanceToNow(new Date(notification.payload.createdAt))}</time>
 

@@ -10,6 +10,11 @@ export const Container = styled.main`
 
     background-color: ${({ theme }) => theme.colors.white};
     border-radius: 15px;
+
+    @media (max-width: 400px) {
+        margin: auto;
+        padding: 1.5rem;
+    }
 `
 
 export const Header = styled.header`

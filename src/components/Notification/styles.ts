@@ -25,12 +25,6 @@ export const Avatar = styled.img`
 `
 
 export const TextContainer = styled.div`
-    > div {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-    }
-
     > time {
         display: block;
         margin-top: 5px;
@@ -44,6 +38,8 @@ export const TextContainer = styled.div`
 `
 
 export const NotificationMessage = styled.strong`
+    display: inline-block;
+
     font-weight: 500;
     font-size: 1rem;
     line-height: 20px;
@@ -93,6 +89,11 @@ export const GroupName = styled.a`
 `
 
 export const NotificationDot = styled.div`
+    display: inline-block;
+
+    vertical-align: middle;
+
+    margin-left: 5px;
     width: 8px;
     height: 8px;
     
