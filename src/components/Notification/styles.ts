@@ -13,7 +13,7 @@ export const Container = styled.li<ContainerProps>`
     background-color: ${({ theme, isNew }) => isNew ? theme.colors.snow : 'transparent'};
 
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1.25rem;
 `
 
@@ -41,7 +41,7 @@ export const TextContainer = styled.div`
     }
 `
 
-export const Message = styled.strong`
+export const NotificationMessage = styled.strong`
     font-weight: 500;
     font-size: 1rem;
     line-height: 20px;
@@ -87,4 +87,29 @@ export const NotificationDot = styled.div`
     border-radius: 50%;
 
     background-color: ${({ theme }) => theme.colors.red};
+`
+
+export const PostPicture = styled.img`
+    margin-left: auto;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 7px;
+`
+
+export const PrivateMessageBox = styled.div`
+    margin-top: 1rem;
+    padding: 1.25rem;
+
+    border: 1px solid ${({ theme }) => theme.colors["very-light-grey-blue"]};
+    border-radius: 5px;
+
+    > p {
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 20px;
+
+        color: ${({ theme }) => theme.colors["dark-grey-blue"]};
+    }
 `

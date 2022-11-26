@@ -6,8 +6,10 @@ import {
     PostName,
     Username,
     NotificationDot,
-    Message,
-    GroupName
+    NotificationMessage,
+    GroupName,
+    PostPicture,
+    PrivateMessageBox
 } from "./styles";
 
 type NotificationType = {
@@ -41,7 +43,7 @@ export function Notification ({ notification }: NotificationProps) {
             <Avatar src={notification.avatarUrl} alt='an user avatar photo' />
             <TextContainer>
                 <div>
-                    <Message>
+                    <NotificationMessage>
                         <Username>
                             {notification.username}
                         </Username>
@@ -49,12 +51,27 @@ export function Notification ({ notification }: NotificationProps) {
                         {getMessageByNotificationType(notification.type)}
 
                         {getAdditionalContentByType(notification)}
-                    </Message>
+                    </NotificationMessage>
 
                     {notification.payload.isNew && <NotificationDot />}
                 </div>
+
                 <time>{notification.payload.createdAt}</time>
+
+                {
+                    (notification.type === NotificationTypes['NEW-PRIVATE-MESSAGE'] && notification.payload.message)
+                    &&
+                    <PrivateMessageBox>
+                        <p>{notification.payload.message}</p>
+                    </PrivateMessageBox>
+                }
             </TextContainer>
+
+            {
+                (notification.type === NotificationTypes['NEW-PICTURE-COMMENT'] && notification.payload.pictureUrl)
+                &&
+                <PostPicture src={notification.payload.pictureUrl} />
+            }
         </Container>
     )
 }
