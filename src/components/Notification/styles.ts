@@ -15,6 +15,8 @@ export const Container = styled.li<ContainerProps>`
     display: flex;
     align-items: flex-start;
     gap: 1.25rem;
+
+    cursor: pointer;
 `
 
 export const Avatar = styled.img`
@@ -49,7 +51,7 @@ export const NotificationMessage = styled.strong`
     color: ${({ theme }) => theme.colors["dark-grey-blue"]};
 `
 
-export const Username = styled.span`
+export const Username = styled.a`
     margin-right: 5px;
 
     font-weight: 800;
@@ -57,9 +59,14 @@ export const Username = styled.span`
     line-height: 20px;
 
     color: ${({ theme }) => theme.colors["very-dark-gray-blue"]};
+
+    &:hover {
+        transition: color 0.2s;
+        color: ${({ theme }) => theme.colors.blue};
+    }
 `
 
-export const PostName = styled.span`
+export const PostName = styled.a`
     margin-left: 6px;
 
     font-weight: 800;
@@ -67,10 +74,15 @@ export const PostName = styled.span`
     line-height: 20px;
 
     color: ${({ theme }) => theme.colors["dark-grey-blue"]};
+
+    &:hover {
+        transition: color 0.2s;
+        color: ${({ theme }) => theme.colors.blue};
+    }
 `
 
 
-export const GroupName = styled.span`
+export const GroupName = styled.a`
     margin-left: 6px;
 
     font-weight: 800;
@@ -89,13 +101,16 @@ export const NotificationDot = styled.div`
     background-color: ${({ theme }) => theme.colors.red};
 `
 
-export const PostPicture = styled.img`
+export const PostPicture = styled.a`
     margin-left: auto;
 
-    width: 45px;
-    height: 45px;
+    > img {
+        width: 45px;
+        height: 45px;
+    
+        border-radius: 7px;
+    }
 
-    border-radius: 7px;
 `
 
 export const PrivateMessageBox = styled.div`
@@ -104,6 +119,11 @@ export const PrivateMessageBox = styled.div`
 
     border: 1px solid ${({ theme }) => theme.colors["very-light-grey-blue"]};
     border-radius: 5px;
+
+    &:hover {
+        transition: background-color 0.2s;
+        background-color: ${({ theme }) => theme.colors["very-light-grey-blue"]};
+    }
 
     > p {
         font-weight: 500;

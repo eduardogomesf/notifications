@@ -70,7 +70,9 @@ export function Notification ({ notification }: NotificationProps) {
             {
                 (notification.type === NotificationTypes['NEW-PICTURE-COMMENT'] && notification.payload.pictureUrl)
                 &&
-                <PostPicture src={notification.payload.pictureUrl} />
+                <PostPicture>
+                    <img src={notification.payload.pictureUrl} />
+                </PostPicture>
             }
         </Container>
     )
