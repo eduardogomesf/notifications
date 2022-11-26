@@ -23,7 +23,7 @@
         "avatarUrl": "/jacob-thompson.webp",
         "type": "NEW-GROUP-JOINER",
         "payload": {
-            "groupdName": "Chess Club",
+            "groupName": "Chess Club",
             "createdAt": "2022-11-26T12:13:46.431Z",
             "isNew": true
         }
@@ -63,7 +63,7 @@
         "avatarUrl": "/anna-kim.webp",
         "type": "LEFT-GROUP",
         "payload": {
-            "groupdName": "Chess Club",
+            "groupName": "Chess Club",
             "createdAt": "2022-11-11T12:13:46.431Z",
             "isNew": false
         }
