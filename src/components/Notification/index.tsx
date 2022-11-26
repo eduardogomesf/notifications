@@ -1,3 +1,4 @@
+import { formatDistanceToNow } from "date-fns";
 import { getMessageByNotificationType, NotificationTypes } from "../../helpers/notifications";
 import {
     Avatar,
@@ -56,7 +57,7 @@ export function Notification ({ notification }: NotificationProps) {
                     {notification.payload.isNew && <NotificationDot />}
                 </div>
 
-                <time>{notification.payload.createdAt}</time>
+                <time>{formatDistanceToNow(new Date(notification.payload.createdAt))}</time>
 
                 {
                     (notification.type === NotificationTypes['NEW-PRIVATE-MESSAGE'] && notification.payload.message)
