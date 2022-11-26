@@ -1,0 +1,71 @@
+[
+    {
+        "username": "Mark Webber",
+        "avatarUrl": "/mark-webber.webp",
+        "type": "NEW-POST-REACTION",
+        "payload": {
+            "postName": "My first tournament today!",
+            "createdAt": "2022-11-26T15:13:46.431Z",
+            "isNew": true
+        }
+    },
+    {
+        "username": "Angela Gray",
+        "avatarUrl": "/angela-gray.webp",
+        "type": "NEW-FOLLOWER",
+        "payload": {
+            "createdAt": "2022-11-26T05:13:46.431Z",
+            "isNew": true
+        }
+    },
+    {
+        "username": "Jacob Thompson",
+        "avatarUrl": "/jacob-thompson.webp",
+        "type": "NEW-GROUP-JOINER",
+        "payload": {
+            "groupdName": "Chess Club",
+            "createdAt": "2022-11-26T12:13:46.431Z",
+            "isNew": true
+        }
+    },
+    {
+        "username": "Rizky Hasanuddin",
+        "avatarUrl": "/rizky-hasanuddin.webp",
+        "type": "NEW-PRIVATE-MESSAGE",
+        "payload": {
+            "message": "Hello, thanks for setting up the Chess Club. I’ve been a member for a few weeks now and I’m already having lots of fun and improving my game.",
+            "createdAt": "2022-11-26T10:13:46.431Z",
+            "isNew": false
+        }
+    },
+    {
+        "username": "Kimberly Smith",
+        "avatarUrl": "/kimberly-smith.webp",
+        "type": "NEW-PICTURE-COMMENT",
+        "payload": {
+            "pictureUrl": "image-chess.webp",
+            "createdAt": "2022-11-19T10:13:46.431Z",
+            "isNew": false
+        }
+    },
+    {
+        "username": "Nathan Peterson",
+        "avatarUrl": "/nathan-peterson.webp",
+        "type": "NEW-POST-REACTION",
+        "payload": {
+            "postName": "5 end-game strategies to increase your win rate",
+            "createdAt": "2022-11-12T10:13:46.431Z",
+            "isNew": false
+        }
+    },
+    {
+        "username": "Anna Kim",
+        "avatarUrl": "/anna-kim.webp",
+        "type": "LEFT-GROUP",
+        "payload": {
+            "groupdName": "Chess Club",
+            "createdAt": "2022-11-11T12:13:46.431Z",
+            "isNew": false
+        }
+    }
+]
